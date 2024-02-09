@@ -1,13 +1,17 @@
-import React from "react";
+import React from 'react';
+import Task from "../components/Task";
+import App from "../components/App";
 
-function Task() {
+
+
+function Tasks ({ task, onDelete }) {
   return (
-    <div className="task">
-      <div className="label">CATEGORY HERE</div>
-      <div className="text">TEXT HERE</div>
-      <button className="delete">X</button>
+    <div>
+      <p>{task.text} - {task.category}</p>
+      <button onClick={onDelete}>Delete</button>
     </div>
   );
 }
 
 export default Task;
+
